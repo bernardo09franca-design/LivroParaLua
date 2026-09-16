@@ -1,10 +1,8 @@
-.gift-cover,.simple-bow{will-change:transform,opacity}
+.gift-cover{will-change:transform,opacity}
 .is-unwrapping .unwrap-button{pointer-events:none;opacity:0;transform:translateY(12px) scale(.94)}
 .is-unwrapping .controls p,.is-unwrapping #interactionHint{opacity:0}
-.is-unwrapping .simple-bow{animation:bowAway .72s cubic-bezier(.2,.75,.2,1) forwards}
-.is-unwrapping .gift-cover{animation:giftReveal .72s .68s ease-in-out forwards}
-.is-unwrapping .book{animation:bookReveal 1s .9s cubic-bezier(.18,.85,.25,1) both}
+.is-unwrapping .gift-cover{animation:giftReveal .9s .18s cubic-bezier(.2,.75,.2,1) forwards}
+.is-unwrapping .book{animation:bookReveal 1s .65s cubic-bezier(.18,.85,.25,1) both}
 .is-unwrapped .gift-cover{display:none}
-@keyframes bowAway{0%{opacity:1}100%{opacity:0;transform:translate(-35%,-190%) translateZ(80px) rotate(22deg) scale(.78)}}
-@keyframes giftReveal{0%{opacity:1;transform:translateZ(8px) scale(1)}100%{opacity:0;transform:translateZ(35px) scale(1.035)}}
+@keyframes giftReveal{0%{opacity:1;transform:translateZ(8px) scale(1)}45%{opacity:.95;transform:translateZ(28px) scale(1.025)}100%{opacity:0;transform:translateZ(55px) translateY(-12px) scale(1.06)}}
 @keyframes bookReveal{0%{transform:scale(.98)}50%{transform:translateY(-12px) scale(1.035)}100%{transform:scale(1)}}
