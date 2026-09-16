@@ -11,7 +11,6 @@
 <body>
 <main class="experience">
   <div class="background-overlay"></div>
-  <div class="ambient one"></div><div class="ambient two"></div>
 
   <header class="intro">
     <p class="eyebrow">UM PRESENTE PARA</p>
@@ -25,31 +24,21 @@
         <div class="book">
           <div class="book-back"></div>
           <div class="book-pages"></div>
-          <div class="book-spine"><span>ESTILHAÇA-ME</span></div>
+          <div class="book-spine"></div>
+
           <div class="book-front">
-            <img src="assets/book/estilhaca-me.jpg" alt="Capa de Estilhaça-Me" class="cover-image" draggable="false"
-                 onerror="this.style.display='none'">
-            <div class="fallback-cover">
-              <span>TAHEREH MAFI</span>
-              <strong>ESTILHAÇA-ME</strong>
-              <i></i>
-              <small>Um presente escolhido para você.</small>
-            </div>
+            <img src="assets/book/estilhaca-me.jpg" alt="Capa de Estilhaça-Me" class="cover-image" draggable="false">
           </div>
 
-          <div class="wrapping">
-            <div class="paper">
-              <div class="pattern">L　✦　♡<br>♡　L　✦<br>✦　♡　L<br>L　✦　♡</div>
-              <div class="paper-name"><span>para</span><strong>Luane</strong></div>
+          <div class="gift-cover" id="giftCover">
+            <img src="assets/embrulho.jpg" alt="Presente embrulhado" class="gift-image" draggable="false">
+            <div class="simple-bow" id="simpleBow" aria-hidden="true">
+              <span class="bow-loop bow-loop-left"></span>
+              <span class="bow-loop bow-loop-right"></span>
+              <span class="bow-knot"></span>
+              <span class="bow-tail bow-tail-left"></span>
+              <span class="bow-tail bow-tail-right"></span>
             </div>
-            <div class="wrap-spine"></div>
-            <div class="wrap-side"></div>
-            <div class="ribbon vertical"></div>
-            <div class="ribbon horizontal"></div>
-            <div class="bow">
-              <div class="loop left"></div><div class="loop right"></div><div class="knot"></div>
-            </div>
-            <div class="tag"><span>especialmente</span><strong>para você</strong></div>
           </div>
         </div>
       </div>
@@ -58,7 +47,7 @@
   </section>
 
   <section class="controls">
-    <button id="unwrapButton" class="unwrap-button"><span>✦</span> Desembrulhar</button>
+    <button id="unwrapButton" class="unwrap-button" type="button"><span>✦</span> Desembrulhar</button>
     <p id="controlsInstruction">Toque e arraste o presente para girar</p>
   </section>
 
