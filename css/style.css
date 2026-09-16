@@ -12,12 +12,13 @@ body{min-height:100dvh;overflow:hidden;font-family:-apple-system,BlinkMacSystemF
 .book-scene{position:relative;width:var(--book-w);height:var(--book-h);perspective:1200px;touch-action:none;cursor:grab}
 .book-rotator{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(-3deg) rotateY(-10deg);will-change:transform}
 .book{position:absolute;inset:0;transform-style:preserve-3d;filter:drop-shadow(0 25px 25px rgba(0,0,0,.34))}
-.book-front,.book-back,.book-pages,.book-spine{position:absolute;transform-style:preserve-3d}
+.book-front,.book-back,.book-pages,.book-spine{position:absolute;transform-style:preserve-3d;opacity:0;visibility:hidden;transition:opacity .45s ease,visibility 0s linear .45s}
 .book-front{inset:0;overflow:hidden;border-radius:4px;background:#ddd;transform:translateZ(0)}
 .cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .book-back{inset:0;background:#cbc8c2;border-radius:5px;transform:translateZ(calc(var(--depth)*-1))}
 .book-pages{top:5px;right:calc(var(--depth)*-1);bottom:5px;width:var(--depth);background:repeating-linear-gradient(to right,#d5cfc3 0,#f5efe5 2px,#ddd7cb 3px);transform-origin:left;transform:rotateY(90deg)}
 .book-spine{top:0;bottom:0;left:calc(var(--depth)*-1);width:var(--depth);background:#bdb9b2;transform-origin:right;transform:rotateY(-90deg)}
+.is-unwrapping .book-front,.is-unwrapping .book-back,.is-unwrapping .book-pages,.is-unwrapping .book-spine,.is-unwrapped .book-front,.is-unwrapped .book-back,.is-unwrapped .book-pages,.is-unwrapped .book-spine{opacity:1;visibility:visible;transition-delay:.48s,0s}
 .gift-cover{position:absolute;inset:-5px;z-index:10;overflow:visible;border-radius:5px;transform:translateZ(8px);transform-style:preserve-3d;pointer-events:none}
 .gift-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;display:block;user-select:none;-webkit-user-drag:none;filter:drop-shadow(0 5px 8px rgba(0,0,0,.18))}
 .shadow{position:absolute;width:78%;height:22px;left:50%;bottom:-45px;transform:translateX(-50%);border-radius:50%;background:rgba(0,0,0,.42);filter:blur(13px)}
