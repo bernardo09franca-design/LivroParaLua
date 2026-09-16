@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#17131d">
+  <title>Para Luane</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<main class="experience">
+  <div class="background-overlay"></div>
+  <div class="ambient one"></div><div class="ambient two"></div>
+
+  <header class="intro">
+    <p class="eyebrow">UM PRESENTE PARA</p>
+    <h1>Luane</h1>
+    <p id="interactionHint">Arraste para conhecer seu presente</p>
+  </header>
+
+  <section class="stage" aria-label="Presente interativo">
+    <div class="book-scene" id="bookScene">
+      <div class="book-rotator" id="bookRotator">
+        <div class="book">
+          <div class="book-back"></div>
+          <div class="book-pages"></div>
+          <div class="book-spine"><span>ESTILHAÇA-ME</span></div>
+          <div class="book-front">
+            <img src="assets/book/estilhaca-me.jpg" alt="Capa de Estilhaça-Me" class="cover-image" draggable="false"
+                 onerror="this.style.display='none'">
+            <div class="fallback-cover">
+              <span>TAHEREH MAFI</span>
+              <strong>ESTILHAÇA-ME</strong>
+              <i></i>
+              <small>Um presente escolhido para você.</small>
+            </div>
+          </div>
+
+          <div class="wrapping">
+            <div class="paper">
+              <div class="pattern">L　✦　♡<br>♡　L　✦<br>✦　♡　L<br>L　✦　♡</div>
+              <div class="paper-name"><span>para</span><strong>Luane</strong></div>
+            </div>
+            <div class="wrap-spine"></div>
+            <div class="wrap-side"></div>
+            <div class="ribbon vertical"></div>
+            <div class="ribbon horizontal"></div>
+            <div class="bow">
+              <div class="loop left"></div><div class="loop right"></div><div class="knot"></div>
+            </div>
+            <div class="tag"><span>especialmente</span><strong>para você</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </section>
+
+  <section class="controls">
+    <button id="unwrapButton" class="unwrap-button"><span>✦</span> Desembrulhar</button>
+    <p id="controlsInstruction">Toque e arraste o presente para girar</p>
+  </section>
+
+  <section class="reveal-message" id="revealMessage" aria-hidden="true">
+    <p>Espero que você goste.</p>
+    <strong>Esse é para você, Luane. ♡</strong>
+  </section>
+</main>
+<script src="js/book.js"></script>
+<script src="js/unwrap.js"></script>
+</body>
+</html>
