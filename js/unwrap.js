@@ -16,5 +16,5 @@ button.addEventListener("click",()=>{
     document.getElementById("controlsInstruction").textContent="Arraste o livro para girar";
     reveal.setAttribute("aria-hidden","false");
     reveal.classList.add("is-visible");
-  },1450);
+  },1200);
 });
